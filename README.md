@@ -5,7 +5,7 @@
 INSERT, UPDATE, DELETE, SET не рассматриваются.<br>
 Планируется добавление ветки на выполнение запросов с инструкциями добавления, обновления, удаления и выборки.
 
-> Реализация:   `python3.8` | pyodbc | django 3.2 <br>
+> Реализация:   python3.8 | pyodbc | django 3.2 <br>
 Сервер БД:    sql server <br>
 База данных:  adventureWorks <br>
 
