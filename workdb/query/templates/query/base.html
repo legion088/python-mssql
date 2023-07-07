@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Работа с БД на языке программирования</title>
+    <link href="{% static 'query/bootstrap.min.css' %}" rel="stylesheet">
+
+
+</head>
+<body>
+
+<div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <span class="fs-4">Работа с базой данных на языке программирования Python</span>
+        </a>
+    </header>
+
+    <form method="post">
+        {% csrf_token %}
+        <span class="input-group-text">SQL запрос</span>
+        <textarea rows="10" class="form-control" name="query"></textarea><br>
+        <button type="submit" class="btn btn-secondary">Выполнить запрос</button>
+    </form>
+
+    {% block content %}
+    {% endblock %}
+
+</div>
+
+
+</body>
+</html>

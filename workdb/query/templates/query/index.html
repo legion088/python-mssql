@@ -1,0 +1,32 @@
+{% extends 'query/base.html' %}
+
+{% block content %}
+
+<p class="3 mt-4"> Результат запроса </p>
+<hr>
+
+{% if not error %}
+<table class="table table-striped">
+
+    <tr>
+        {% for col in result.keys %}
+        <th>{{col}}</th>
+        {% endfor %}
+    </tr>
+
+    <tr>
+        {% for row in result.values %}
+        <td>
+            {% for r in row %}
+            {{r}}<br>
+            {% endfor %}
+        </td>
+        {% endfor %}
+    </tr>
+
+</table>
+{% else %}
+{{error}}
+{% endif %}
+
+{% endblock %}
